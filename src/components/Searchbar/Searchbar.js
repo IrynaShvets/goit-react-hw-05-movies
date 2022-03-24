@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
-import { RiErrorWarningFill } from 'react-icons/ri';
 import { MdMovieFilter } from 'react-icons/md';
 import { Form, Button, Input } from './Searchbar.styled';
 
@@ -20,10 +19,11 @@ export default function Searchbar({ onSubmit }) {
     event.preventDefault();
 
     if (query.trim() === '') {
-      toast(
+      toast.error(
         'Sorry, there are no movies matching your search query. Please try again.',
         {
-          icon: <RiErrorWarningFill style={{ color: '#35af7c' }} />,
+          theme: 'colored',
+          autoClose: 3000,
         },
       );
       return;
