@@ -7,4 +7,5 @@ export const List = styled.ul`
   grid-gap: 16px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
 `;

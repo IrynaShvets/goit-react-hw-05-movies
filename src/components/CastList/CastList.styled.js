@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 export const List = styled.ul`
   display: grid;
-  max-width: calc(100vw - 37px);
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  grid-gap: 16px;
+  max-width: calc(100vw - 60px);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 18px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
 `;
 
 export const Item = styled.li`

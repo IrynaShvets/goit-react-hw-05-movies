@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import { movieCreditsApi } from '../services/moviesApi';
 import CastList from '../components/CastList';
 import Loader from '../components/Loader';
+import Text from '../components/Text';
 
 export default function Cast() {
   const { movieId } = useParams();
@@ -28,7 +29,11 @@ export default function Cast() {
 
   return (
     <>
-      {cast.length > 0 && <CastList cast={cast} />}
+      {cast.length > 0 ? (
+        <CastList cast={cast} />
+      ) : (
+        <Text text="We don't have any cast for this movie." />
+      )}
       {error && toast.error(error.message)}
       {loading && <Loader />}
     </>
